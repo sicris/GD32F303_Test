@@ -1,0 +1,6 @@
+[submodule "components/GD32F30x_Firmware_Library"]
+	path = components/GD32F30x_Firmware_Library
+	url = https://github.com/sicris/GD32F30x_Firmware_Library.git
+[submodule "components/FreeRTOS-Kernel"]
+	path = components/FreeRTOS-Kernel
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
