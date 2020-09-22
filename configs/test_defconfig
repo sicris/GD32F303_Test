@@ -1,0 +1,10 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Test Configuration
+#
+
+#
+# Test Configuration
+#
+# CONFIG_FOO is not set
+CONFIG_BAR=y

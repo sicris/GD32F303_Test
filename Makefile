@@ -6,17 +6,14 @@
 .PHONY: menuconfig defconfig savedefconfig
 MCONF := $(CURDIR)/configs/scripts/kconfig/mconf
 CONF := $(CURDIR)/configs/scripts/kconfig/conf
-ENV_BSP_DIR := $(CURDIR)/components/bsp
 
 $(info MCONF is $(MCONF))
 $(info CONF is $(CONF))
 
-export ENV_BSP_DIR
-
 ifeq ("$(origin DEF_CONF)", "command line")
 DEFCONFIG_FILE := configs/$(DEF_CONF)
 else
-DEFCONFIG_FILE := configs/rotiSlaveApp_defconfig
+DEFCONFIG_FILE := configs/test_defconfig
 endif
 
 menuconfig:
@@ -38,6 +35,6 @@ savedefconfig:
 help:
 	@echo 'Help'
 	@echo 'make menuconfig - run menu configuration and generate autoconf.h'
-	@echo 'make defconfig - generate autoconf.h using default file rotiSlaveApp_defconfig'
+	@echo 'make defconfig - generate autoconf.h using default file test_defconfig'
 	@echo 'make defconfig DEF_CONF=file - generate autoconf.h using specified defconfig file'    
 	@echo 'make savedefconfig - copies .config to configs/defconfig'    
